@@ -1,6 +1,6 @@
-baseURL: https://example.com
+baseURL: https://abytecurious.bid
 languageCode: en-us
-title: Yourfolio Theme
+title: A Byte Curious
 theme: yourfolio
 disableKinds: [RSS, taxonomy, taxonomyTerm]
 googleAnalytics: UA-XXXXX-Y
