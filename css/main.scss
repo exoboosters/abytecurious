@@ -1,0 +1,423 @@
+@import 'colors';
+@import 'sizes';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $body-background-color;
+  font-family: 'Roboto', sans-serif;
+  color: $main-text-color;
+  padding-top: $body-padding-top;
+  font-weight: $main-font-weight;
+}
+
+::selection {
+  background: $selection-background-color;
+  color: $selection-text-color;
+}
+
+::-moz-selection {
+  background: $selection-background-color;
+  color: $selection-text-color;
+}
+
+h1 {
+  font-size: $h1;
+  font-weight: $h1-font-weight;
+}
+
+h2 {
+  font-size: $h2;
+  font-weight: $h2-font-weight;
+  line-height: $h2-line-height;
+}
+
+h3 {
+  font-size: $h3;
+  font-weight: $h3-font-weight;
+  line-height: $h3-line-height;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: $p;
+  line-height: $p-line-height;
+}
+
+a {
+  font-size: $a;
+  text-decoration: none;
+}
+
+span {
+  font-size: $span;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-container-transition {
+  overflow: hidden;
+  img {
+    transition: all .2s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+button, .ca-a-button {
+  padding: $button-padding;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  text-transform: uppercase;
+  background: $button-background-color;
+  color: $button-text-color;
+  border: none;
+  cursor: pointer;
+  &:focus {
+    outline: $button-outline-width solid $button-outline-color;
+  }
+}
+
+/*
+--Shadow
+*/
+.ca-card-container {
+  box-shadow: 0 1px 3px rgba(117, 117, 117, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background-color: #ffffff;
+}
+
+/*
+--Navigation
+*/
+.ca-nav-bar {
+  height: $nav-bar-height;
+  background-color: $nav-bar-background-color;
+  z-index: $nav-bar-z-index;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  /*
+  --Highlight Nav Link
+  */
+  .highlight-link {
+    text-align: center;
+    background-color: $highlight-link-background-color;
+    width: $highlight-link-width;
+    height: $highlight-link-height;
+    transition: background-color 0.1s ease;
+    &:hover {
+      background-color: darken( $highlight-link-background-color, 5% );
+    }
+    &:active {
+      background-color: darken( $highlight-link-background-color, 0% );
+    }
+    p {
+      font-size: $highlight-link-text-size;
+      line-height: $highlight-link-text-line-height;
+      font-weight: $highlight-link-text-weight;
+      color: $highlight-link-text-color;
+      text-transform: uppercase;
+      position: relative;
+      top: calc(50% - 18px);
+    }
+  }
+  .mobile-nav {
+    display: none;
+  }
+  .mobile-nav i {
+    color: $nav-bar-links-color;
+    width: $nav-bar-icon-mobile-size;
+    font-size: $nav-bar-icon-mobile-size;
+    cursor: pointer;
+    &:hover {
+      color: darken( $nav-bar-links-color, 10% );
+    }
+    &:active {
+      color: darken( $nav-bar-links-color, 0% );
+    }
+  }
+}
+
+.ca-nav-bar-links {
+  a {
+    color: $nav-bar-links-color;
+    text-transform: uppercase;
+    font-weight: $nav-bar-links-font-weight;
+    transition: color 0.1s ease;
+    &:hover {
+      color: darken( $nav-bar-links-color, 10% );
+    }
+    &:active {
+      color: darken( $nav-bar-links-color, 0% );
+    }
+  }
+  li {
+    display: inline-block;
+    margin-left: $nav-bar-links-margin-left;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.ca-nav-bar-links i, .ca-header i, .ca-separation i, .footer-brand i, .routine i {
+  font-size: $main-dot-icon-font-size;
+  vertical-align: middle;
+  color: $nav-bar-icons-color;
+  width: $main-dot-icon-font-size;
+}
+
+/*
+--Header
+*/
+.ca-header {
+  margin-top: $header-margin-top;
+  margin-bottom: $header-margin-bottom;
+  .brand, .phrase {
+    text-align: center;
+  }
+  .phrase {
+    margin-top: $header-phrase-margin-bottom;
+  }
+  img {
+    width: $header-logo-size;
+    height: $header-logo-size;
+  }
+}
+
+/*
+--Link 1 - Agency & work
+*/
+
+.ca-agency, .ca-work {
+  background-color: $agency-work-background-color;
+}
+
+.ca-agency .image-card, .ca-work .image-card, .routine-image-card {
+  min-height: $main-image-min-card-height;
+  height: $main-image-card-height;
+}
+
+.ca-agency .text-card, .ca-work .text-card {
+  padding: $agency-work-text-card-padding;
+  position: absolute;
+  bottom: 0;
+  width: $agency-work-text-card-width;
+}
+
+.color1 {  background-color: $color1; }
+.color2 {  background-color: $color2; }
+.color3 {  background-color: $color3; }
+.color4 {  background-color: $color4; }
+
+/*
+--Routine
+*/
+
+.routine {
+  margin-top: $routine-margin-top;
+  text-align: center;
+  h2 {
+    margin-bottom: $routine-heading-margin-bottom;
+    font-size: $routine-heading-font-size;
+    color: $main-text-color;
+  }
+  .routine-container {
+    margin-top: $routine-container-margin-top;
+  }
+}
+
+/*
+--Link 2 - Work
+*/
+.ca-work {
+  .about {
+    padding: $work-about-padding;
+  }
+  h2 {
+    color: $work-heading-color;
+    margin-top: $work-heading-margin-top;
+    margin-bottom: $work-heading-margin-bottom;
+    line-height: 1.2;
+  }
+  .tags .tag {
+    padding: $work-tag-padding;
+    background-color: $work-tag-background-color;
+    color: $work-tag-color;
+    margin: $work-tag-margin;
+    display: inline-block;
+  }
+  p {
+    font-size: $work-text-size;
+    line-height: $work-text-line-height;
+    margin-top: $work-text-margin-top
+  }
+  .ca-a-button {
+    margin-top: $work-button-margin-top;
+    display: inline-block;
+  }
+}
+
+.ca-work p, .ca-work .date  {
+  color: $work-text-color;
+}
+
+/*
+--Services & Contact
+*/
+.ca-services-contact {
+  padding: $services-contact-padding;
+}
+
+.ca-services {
+  p {
+    margin: $services-text-margin;
+    font-size: $services-text-font-size;
+    color: $services-text-color;
+  }
+  h2 {
+    margin-bottom: $services-heading-font-size;
+  }
+}
+
+.ca-services-links {
+  margin-bottom: $services-links-margin-bottom;
+}
+
+.services-color1 {  color: $services-heading1-color }
+.services-color2 {  color: $services-heading2-color }
+.services-color3 {  color: $services-heading3-color }
+.services-color4 {  color: $services-heading4-color }
+
+.ca-contact {
+  h2 {
+    margin-bottom: $contact-heading-margin-bottom;
+  }
+  i {
+    margin-left: $contact-icon-margin;
+    margin-right: $contact-icon-margin;
+    font-size: $contact-icon-font-size;
+    width: $contact-icon-font-size;
+  }
+  input {
+    background-color: transparent;
+    width: 100%;
+    margin-bottom: $contact-input-margin-bottom;
+    border: none;
+    font-size: $contact-input-font-size;
+    color: $contact-input-color;
+    outline: none;
+    padding-right: $contact-input-padding-right;
+    &::placeholder {
+      color: $contact-input-color;
+    }
+  }
+  button {
+    margin-top: $contact-button-margin-top;
+  }
+}
+
+.ca-contact-input-container {
+  border-bottom: 1px solid $contact-input-container-border-color;
+  margin-bottom: $contact-input-container-margin-bottom;
+}
+
+/*
+--Footer
+*/
+.footer h2, .footer-social i, .ca-contact i {
+  color: $brand-color;
+}
+
+.footer {
+  padding: $footer-padding;
+  background-color: $contact-background-color;
+  text-align: center;
+}
+
+.footer-rights {
+  margin-top: $footer-rights-margin-top;
+  p {
+    display: inline;
+    font-size: $footer-text-font-size;
+  }
+  i {
+    width: $footer-rights-icons-font-size;
+    font-size: $footer-rights-icons-font-size;
+    color: $contact-icons-color;
+  }
+}
+
+.footer-social i {
+  padding: $footer-social-icons-margin;
+  font-size: $footer-social-font-size;
+  transition: color 0.1s ease;
+  &:hover {
+    color: darken( $brand-color, 10% );
+  }
+  &:active {
+    color: darken( $brand-color, 0% );
+  }
+}
+
+/*
+--Media - Queries
+*/
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  h1 {
+    font-size: 62px;
+  }
+  //Nav-bar Mobile
+  .ca-nav-bar {
+    .ca-nav-bar-links {
+      display: none;
+    }
+    .mobile-nav {
+      display: block;
+    }
+  }
+  .ca-nav-bar-links {
+    padding: 50px 0;
+    position: fixed;
+    top: $nav-bar-height;
+    left: 0;
+    right: 0;
+    background-color: $nav-bar-background-color;
+    text-align: center;
+    li {
+      user-select: none;
+      width: 100%;
+      display: inline-block;
+      margin-left: 0;
+      &:first-child {
+        margin-left: 0;
+      }
+      .fa-square-full {
+        display: none;
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  .ca-contact {
+    margin-top: $contact-mobile-margin-top;
+  }
+  .ca-work {
+    .about {
+      padding: $work-about-padding-mobile-md;
+    }
+  }
+}

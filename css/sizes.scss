@@ -1,0 +1,117 @@
+/*
+--Sizes
+*/
+
+/*
+--Text
+*/
+$h1: 84px;
+$h1-font-weight: 900;
+$h2: 40px;
+$h2-font-weight: 700;
+$h2-line-height: 1;
+$h3: 18px;
+$h3-font-weight: 700;
+$h3-line-height: 1.6;
+$p: 18px;
+$p-line-height: 1.6;
+$a: 14px;
+$span: 14px;
+
+/*
+--Nav-bar
+*/
+$nav-bar-height: 80px;
+$nav-bar-z-index: 10;
+$nav-bar-links-font-weight: 500;
+$nav-bar-links-margin-left: 20px;
+$highlight-link-width: 90px;
+$highlight-link-height: $nav-bar-height;
+$highlight-link-text-size: 15px;
+$highlight-link-text-weight: 700;
+$highlight-link-text-line-height: 18px;
+$nav-bar-icon-mobile-size: 32px;
+
+/*
+--Globals
+*/
+$body-padding-top: $nav-bar-height;
+$main-font-weight: 400;
+//Main icon
+$main-dot-icon-font-size: 4px;
+//Main image card
+$main-image-min-card-height: 268px;
+$main-image-card-height: 100%;
+
+/*
+--Button
+*/
+$button-padding: 14px 42px;
+$button-font-size: 14px;
+$button-font-weight: 700;
+$button-outline-width: 3px;
+
+/*
+--Header
+*/
+$header-margin-top: 100px;
+$header-margin-bottom: 160px;
+$header-phrase-margin-bottom: 60px;
+$header-logo-size: 62px;
+
+/*
+--Agency - Work
+*/
+//Agency
+$agency-work-text-card-padding: 18px 30px;
+$agency-work-text-card-width: 100%;
+
+//Work
+$work-about-padding: 90px;
+$work-about-padding-mobile-md: 60px;
+$work-heading-margin-top: 25px;
+$work-heading-margin-bottom: 25px;
+$work-tag-padding: 8px 16px;
+$work-tag-margin: 5px 5px 5px 0;
+$work-text-size: 16px;
+$work-text-line-height: 1.8;
+$work-text-margin-top: 35px;
+$work-button-margin-top: 35px;
+
+/*
+--Routine
+*/
+$routine-margin-top: 100px;
+$routine-heading-margin-bottom: 20px;
+$routine-heading-font-size: 56px;
+$routine-container-margin-top: 30px;
+
+/*
+--Services & Contact
+*/
+$services-contact-padding: 160px 0;
+//Services
+$services-text-margin: 6px 0;
+$services-text-font-size: 16px;
+$services-heading-font-size: 20px;
+$services-links-margin-bottom: 40px;
+//Contact
+$contact-heading-margin-bottom: 50px;
+$contact-icon-margin: 16px;
+$contact-icon-font-size: 18px;
+$contact-input-margin-bottom: 15px;
+$contact-input-font-size: 16px;
+$contact-input-padding-right: 16px;
+$contact-input-container-margin-bottom: 35px;
+$contact-button-margin-top: 15px;
+$contact-mobile-margin-top: 80px;
+
+/*
+--Footer
+*/
+$footer-padding: 50px 0;
+$footer-social-icons-margin: 12px 12px 0 12px;
+$footer-social-font-size: 18px;
+$footer-rights-margin-top: 12px;
+$footer-text-font-size: 17px;
+$footer-rights-icons-font-size: 18px;
